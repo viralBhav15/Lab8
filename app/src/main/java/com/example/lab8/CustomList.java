@@ -11,6 +11,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class CustomList extends ArrayAdapter<City> {
 
@@ -67,6 +69,13 @@ public class CustomList extends ArrayAdapter<City> {
         return cities.contains(city);
     }
 
+    /**
+     * @param city
+     * Deleting the city from the list
+     * Raising error if the city to delete is not in the city list
+     */
+    public void delete(City city){
 
+    }
 
 }

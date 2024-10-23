@@ -50,5 +50,20 @@ public class CustomListTest {
         assertFalse(cityList.hasCity(city2), "CityList should not contain Toronto");
     }
 
+    @Test
+    void testDeleteCity(){
+        CustomList citylist = MockCityList();
+        //assertEquals(1, citylist.getCities().size());
+        City city1 = new City("Miami", "Florida");
+//
+        citylist.addCity(city1);
+        assertTrue(citylist.hasCity(city1));
+        //assertEquals(2, citylist.getCities().size());
 
+        citylist.delete(city1);
+
+        //assertEquals(1, citylist.getCities().size());
+        assertFalse(citylist.hasCity(city1));
+        //assertFalse(citylist.getCities().contains(mockCity()));
+    }
 }
